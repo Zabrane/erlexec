@@ -47,7 +47,7 @@ X64       := $(if $(findstring $(MARCH),x86_64),-m64)
 # Set optimization flag
 OPTIMIZE  ?= true
 ifneq ($(filter $(OPTIMIZE),true 3),)
-  CXXFLAGS += -O3 -DNDEBUG
+  CXXFLAGS += -O2 -DNDEBUG
 else ifneq ($(filter $(OPTIMIZE),false 0),)
   CXXFLAGS += -O0 -g
 else
